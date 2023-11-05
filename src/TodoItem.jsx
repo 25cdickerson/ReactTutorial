@@ -1,6 +1,8 @@
 /* eslint-disable react/prop-types */
-export default function TodoItem({ completed, id, title, toggleTodo, deleteTodo}){
 
+/* Create a TodoItem component  */
+// Get the passed variables ( completed (boolean), id (int), title (string), toggleTodo (function), deleteTodo (function))
+export default function TodoItem({ completed, id, title, toggleTodo, deleteTodo}){
     return (
         <>
         <li key={id}>

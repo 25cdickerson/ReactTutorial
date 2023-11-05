@@ -1,6 +1,8 @@
 /* eslint-disable react/prop-types */
 import TodoItem from "./TodoItem";
 
+/* Create a TodoList component  */
+// Get the passed variables ( todos (array), toggleTodo (function), deleteTodo (function))
 export default function TodoList({ todos, toggleTodo, deleteTodo }) {
   return (
     <>

@@ -9,6 +9,7 @@ export default function App() {
   /* State Variables */
   // Variables in react are immutable, so you need to use a function to set their properties
   const [todos, setTodos] = useState(() => {
+    // Get the inital value of the todos array from local storage if exists
     const localValue = localStorage.getItem("ITEMS")
     if(localValue == null){
       return []
@@ -17,10 +18,12 @@ export default function App() {
     return JSON.parse(localValue)
   })
 
+  // Everytime the todos are changed, store to loca; storage
   useEffect(() => {
     localStorage.setItem("ITEMS", JSON.stringify(todos))
   }, [todos])
 
+  /* Create function to handle adding a todo */
   function addTodo(title) {
     setTodos((currentTodos) => {
       return [
